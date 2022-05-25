@@ -2,6 +2,7 @@ import BookForm from "./components/BookForm";
 import BookList from "./components/BookList";
 import Navbar from "./components/Navbar";
 import SongList from "./components/SongList";
+import SongTitle from "./components/SongTitle";
 import BookContextProvider from "./contexts/BookContext";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <BookList />
         <BookForm />
       </BookContextProvider>
+      <SongTitle />
       <SongList />
     </div>
   );

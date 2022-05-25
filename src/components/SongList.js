@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import uuid from 'react-uuid'
 import NewSongForm from './NewSongForm';
+import SongDetails from './SongDetails';
 
 const SongList = () => {
     const [songs, setSongs] = useState([
@@ -12,6 +13,9 @@ const SongList = () => {
     const addSong = (title) => {
         setSongs([...songs, { title, id: uuid() }])
     }
+    const removeSong = (id) => {
+        setSongs(songs.filter(song => song.id != id))
+    }
 
     useEffect(() => {
         console.log("useeff");
@@ -19,13 +23,11 @@ const SongList = () => {
 
     return (
         <div className='song-list'>
-          
+
             <ul>
-                {songs.map(song => {
-                    return (<li key={song.id}>{song.title}</li>)
-                })}
+                {songs.map(song => <SongDetails key={song.id} song={song} removeSong={removeSong}/>)}
             </ul>
-            <NewSongForm addSong={addSong}/>
+            <NewSongForm addSong={addSong} />
         </div>
     )
 }

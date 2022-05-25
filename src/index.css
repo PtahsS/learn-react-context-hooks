@@ -88,3 +88,41 @@ input[type="submit"] {
   padding: 6px 20px;
   display: block;
 }
+
+.song-title {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  background-color: #6d3d6d;
+  text-align: center;
+}
+
+.song-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.song-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.song-list li{
+  width: 300px;
+  list-style-type: none;
+  text-align: center;
+  padding: 10px 0;
+  margin: 20px;
+  background: #3c1f3c;
+  color: #FFF;
+  border: solid 1px #000;
+  border-radius: 4px;
+}
+
+.song-list li:hover {
+  color: #aaa;
+  border: none;
+  text-decoration: line-through #aaa 3px;
+}
